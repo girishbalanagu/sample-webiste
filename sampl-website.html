@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webstie</title>
+    <style>
+        header {
+            height: 200px;
+            width: auto;
+            background-color: limegreen;
+            padding-left: 0;
+            padding-right: 100px;
+            padding-top: 40px;
+            padding-bottom: 0px;
+            font-family: sans-serif;
+        }
+
+        header h1, header p {
+            text-align: right;
+        }
+
+        nav {
+            background-color: lightblue;
+        }
+        
+        nav ul{
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li{
+            display: inline-block;
+            padding: 10px 30px;
+            /* border-right: 3px solid brown; */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: brown;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        section {
+            display: inline-block;
+        }
+        
+        .section1 {
+            width: 30%;
+        }
+
+        .section1 h2 {
+            background-color: darkgoldenrod;
+        }
+
+        .section1 ul {
+            list-style: none;
+            padding: 5px;
+        }
+
+        .section1 ul li a {
+            color: brown;
+            text-decoration: none;
+        }
+
+        .section2 {
+            width: 65%;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>
+            Welcome Deepu Website
+        </h1>
+        <p>One show for everything</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="section1">
+        <h2 id="menu">Main menu</h2>
+        <ul id="list">
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#">Menu Item 4</a></li>
+            <li><a href="#">Menu Item 5</a></li>
+        </ul>
+    </section>
+
+    <section class="section2">
+        <h2>Gallery</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores minima repellendus voluptatem iure nobis qui maxime, ipsa corporis necessitatibus id quis ad, esse voluptate dicta, deleniti aspernatur sed. Ullam, quis?</p>
+    </section>
+    
+    <script>
+        let menu = document.getElementById('menu');
+        let list = document.getElementById('list');
+        let show = false;
+
+        menu.addEventListener('click', function() {
+            show = !show;
+
+            if(show) {
+                list.setAttribute("style", "display:none");
+            } else {
+                list.setAttribute("style", "display:block");
+            }
+        })
+    </script>
+</body>
+</html>
